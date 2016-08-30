@@ -78,3 +78,44 @@ form of choices.
                     }
                 ]
             }
+
++ Request (application/json)
+
+        {
+            "uuid":"123qwe123qwe123qwe"
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /listar_usuarios
+
+    + Body
+
+            {
+                "lista_usuarios": [
+                    {
+                        "id" : 0,
+                        "email": "ricardoquinteromd@gmail.com"
+                    }, 
+                    {
+                        "id" : 1,
+                        "email": "dayanamartinez@gmail.com"
+                    }, 
+                    {
+                        "id" : 2,
+                        "email": "rene@gmail.com"
+                    }, 
+                   
+                ]
+            }
++ Response 400 (application/json)
+    + Headers
+
+            Location: /listar_usuarios
+    + Body
+
+            {
+                "error": "Algo salio mal"
+            }
